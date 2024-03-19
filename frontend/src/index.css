@@ -1,9 +1,9 @@
 :root {
   --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --color-text: rgba(255, 255, 255, 0.87);
-  --color-link: #646cff;
-  --color-link-hover: #535bf2;
-  --color-background: #242424;
+  --color-text: #444444; /* Dark gray for text */
+  --color-link: #e76f51; /* Peach color for links */
+  --color-link-hover: #c0604a; /* Darker peach color for link hover */
+  --color-background: #f2d9b6; /* Light peach for background */
 
   font-family: var(--font-primary);
   line-height: 1.5;
@@ -48,7 +48,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #e76f51; /* Peach color for buttons */
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -62,8 +62,8 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-text: #213547;
-    --color-background: #ffffff;
+    --color-text: #444444;
+    --color-background: #ffffff; /* White background for light mode */
   }
   a:hover {
     color: #747bff;
