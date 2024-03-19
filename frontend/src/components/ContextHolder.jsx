@@ -1,9 +1,11 @@
 import {useState, useEffect } from "react";
 import AppRoutes from "../AppRoutes";
-// import Navbar from "./Navbar"; 
+import NavBar from "./NavBar";
 import UserContext from "../context/UserContext";
 import JoblyApi from "../../api";
 import { jwtDecode } from "jwt-decode";
+import { ThemeProvider } from "@emotion/react";
+import theme from "../context/theme";
 import { BrowserRouter } from "react-router-dom";
 
 const ContextHolder = () => {
@@ -84,7 +86,7 @@ const ContextHolder = () => {
     <ThemeProvider theme={theme}>
       <UserContext.Provider value={context}>
         <BrowserRouter>
-          <Navbar />
+          <NavBar />
           {/* Routes for the app */}
           <AppRoutes />
         </BrowserRouter>

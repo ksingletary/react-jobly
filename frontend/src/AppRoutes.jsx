@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import JobsList from "./pages/JobsList";
 import CompaniesList from "./pages/CompaniesList";
-// import CompanyDetail from "./components/CompanyDetail";
+import CompanyDetail from "./components/CompanyDetail";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import Home from "./pages/Home";
-// import Logout from "./components/Logout";
+import Logout from "./components/Logout";
 import { useContext } from "react";
 import UserContext from "./context/UserContext";
-// import ProtectedRoutes from "./components/ProtectedRoutes";
+import ProtectedRoutes from "./components/ProtectedRoutes";
 
 
 const AppRoutes = () => {
