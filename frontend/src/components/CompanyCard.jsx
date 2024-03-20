@@ -29,10 +29,10 @@ import {
               {name}
             </Typography>
             <Typography gutterBottom variant="body2" color="text.secondary">
-              {numEmployees} employees
+              {numEmployees} 
             </Typography>
             <Typography gutterBottom variant="body">
-              {description} employees
+              {description} 
             </Typography>
   
           </CardContent>

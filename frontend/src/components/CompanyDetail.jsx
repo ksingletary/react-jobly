@@ -47,21 +47,23 @@ const Company = () => {
               <h3>Jobs for {company.name}</h3>
             </div>
             <div>
-              
-              {company.jobs.map(({ title, salary, id, equity }) => (
-                <JobCard
-                  key={id}
-                  title={title}
-                  salary={salary}
-                  equity={equity}
-                />
-              ))}
+              {company.jobs
+                .filter(job => job.id && !isNaN(job.id))
+                .map(({ id, title, salary, equity }) => (
+                  <JobCard
+                    key={id}
+                    title={title}
+                    salary={salary}
+                    equity={equity}
+                  />
+                ))}
             </div>
           </div>
         )}
       </div>
     </>
   );
+  
 };
 
 export default Company;

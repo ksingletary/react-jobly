@@ -89,10 +89,15 @@ class JoblyApi {
     return res.user;
   }
   // Apply to a job
-  static async applyToJob(username,jobId) {
-    let res = await this.request(`users/${username}/jobs/${jobId}`,{},'post');
+  static async applyToJob(username, jobId) {
+    if (!jobId || isNaN(jobId)) {
+      throw new Error('Invalid jobId provided');
+    }
+  
+    let res = await this.request(`users/${username}/jobs/${jobId}`, {}, 'post');
     return res;
   }
+  
 
 }
 

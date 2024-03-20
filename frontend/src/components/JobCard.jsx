@@ -12,10 +12,10 @@ const JobCard = ({ title, salary, equity, id, companyName }) => {
   // For each job, evaluate if user has applied or not. Result is passed to the Apply button element.
 
   const [hasApplied, setHasApplied] = useState(() => {
-    return Boolean(
-      (applications && applications.filter((app) => app == id)) > 0
-    );
-  });
+    return applications && applications.includes(id);
+});
+
+  
 
   // Use api to apply based on username and job id.
   // Upon success, set state of hasApplied to true

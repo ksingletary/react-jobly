@@ -50,17 +50,6 @@ const Profile = () => {
               INITIAL_FORM_DATA={initialFormData}
               updateProfile={updateProfile}
             />
-            <h3>Here are the jobs you have applied to:</h3>
-          <Grid container spacing={4}>
-
-            {/* {currentUser.jobs && (currentUser.jobs.map((job) => (<li key={job.id}>{job.title}</li>)))} */}
-            {currentUser.jobs &&
-              currentUser.jobs.map((job) => (
-                <Grid item key={job.id}>
-                  <JobCard id={job.id} title={job.title}></JobCard>
-                </Grid>
-              ))}
-          </Grid>
 
         </div>
       )}
